@@ -60,7 +60,7 @@ class TXN():
 
 
     def setup_swapper(self):
-        swapper_address = Web3.toChecksumAddress("0x18be7f977Ec1217B71D0C134FBCFF36Ea4366fCD") 
+        swapper_address = Web3.toChecksumAddress(self.token_address) 
         with open("./abis/BSC_Swapper.json") as f:
             contract_abi = json.load(f)
         swapper = self.w3.eth.contract(address=swapper_address, abi=contract_abi)
